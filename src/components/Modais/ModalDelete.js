@@ -2,19 +2,17 @@ import React from 'react';
 import { View, SafeAreaView, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 export function ModalDelete( { handleClose, handleDelete, nome,id}) {
-
-    
-
     return (
        <SafeAreaView style={styles.container}>
             <TouchableOpacity style={{ flex: 1, zIndex:9, }} onPress={ handleClose }></TouchableOpacity>
 
             <View style={styles.content}>
                 <Text style={styles.textTitle}>Deletar Membro</Text>
-                <Text style={styles.textMsg}>{nome}</Text>
+                <Text style={styles.textMsg}>{ nome }</Text>
                 
                 <View style={styles.botoes}>
 
+                    {/* Botao Cancelar */}
                     <TouchableOpacity 
                         style={styles.btnCancel} 
                         onPress={ handleClose }
@@ -22,9 +20,10 @@ export function ModalDelete( { handleClose, handleDelete, nome,id}) {
                         <Text style={styles.textCancel}>Cancelar</Text>
                     </TouchableOpacity>
 
+                    {/* Botao Deletar */}
                     <TouchableOpacity 
                         style={styles.btnDelete} 
-                        onPress={ () => handleDelete(id)}
+                        onPress={ () => handleDelete(id)} //Chama a função de Deletar Membro
                     >
                         <Text style={styles.textDelete}>Deletar</Text>
                     </TouchableOpacity>
@@ -121,11 +120,5 @@ const styles = StyleSheet.create({
         fontSize: 20,
         padding: 4,
         color: '#FF0000',
-    },
-
-    
-
-
-
-    
+    },    
 })

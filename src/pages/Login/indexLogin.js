@@ -16,7 +16,7 @@ const Entrar = () => {
   );
 };
 
-const Login = () => {
+export default function Login() {
   return (        
     <View style={styles.container}>
       <View style={styles.card}>
@@ -42,6 +42,7 @@ const Login = () => {
             </View>
 
             <Entrar/>
+            
           </View>
         </View> 
       </View>
@@ -49,7 +50,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+
 
 
 const styles = StyleSheet.create({
@@ -95,11 +96,6 @@ const styles = StyleSheet.create({
     campos: {
         flexDirection: 'row',
         margin: 10,
-    },
-
-    icon: {
-        width: 25,
-        height: 25,
     },
 
     input:{

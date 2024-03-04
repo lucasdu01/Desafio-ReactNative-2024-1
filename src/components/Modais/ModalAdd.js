@@ -10,13 +10,13 @@ export function ModalAdd( { handleClose, handleCreate }) {
 
     const criarMembro = () => {
         const novoMembro = {
-          name: nome, // Substitua por sua variável de estado correspondente
+          name: nome,
           email: email,
-          aniversario: aniversario, // Substitua por sua variável de estado correspondente
+          aniversario: aniversario,
           cargo: cargo,
         };
     
-        handleCreate(novoMembro);
+        handleCreate(novoMembro); //Chama a função de Adicionar Membro
       };
 
     return (
@@ -25,11 +25,44 @@ export function ModalAdd( { handleClose, handleCreate }) {
 
             <View style={styles.content}>
                 <Text style={styles.textTitle}>Adicionar Membro</Text>
-                <TextInput style={styles.campos} placeholder='Nome:' value={nome} onChangeText={(text) => setNome(text)}></TextInput>
-                <TextInput style={styles.campos} placeholder='E-mail:' value={email} onChangeText={(text) => setEmail(text)}></TextInput>
-                <TextInput style={styles.campos} placeholder='Data de Aniversário:' value={aniversario} onChangeText={(text) => setAniversario(text)}></TextInput>
-                <TextInput style={styles.campos} placeholder='Cargo:' value={cargo} onChangeText={(text) => setCargo(text)}></TextInput>
 
+                {/* Campo Nome */}
+                <TextInput 
+                    style={styles.campos} 
+                    placeholder='Nome:' 
+                    value={nome} 
+                    onChangeText={(text) => setNome(text)}
+                >
+                </TextInput>
+
+                {/* Campo Email */}
+                <TextInput 
+                    style={styles.campos} 
+                    placeholder='E-mail:' 
+                    value={email} 
+                    onChangeText={(text) => setEmail(text)}
+                >
+                </TextInput>
+
+                {/* Campo Aniversario */}
+                <TextInput 
+                    style={styles.campos} 
+                    placeholder='Data de Aniversário:' 
+                    value={aniversario} 
+                    onChangeText={(text) => setAniversario(text)}
+                >
+                </TextInput>
+
+                {/* Campo Cargo */}
+                <TextInput 
+                    style={styles.campos}       
+                    placeholder='Cargo:' 
+                    value={cargo} 
+                    onChangeText={(text) => setCargo(text)}
+                >
+                </TextInput>
+
+                {/* Botão Salvar */}
                 <TouchableOpacity 
                     style={styles.btnSave} 
                     onPress={ criarMembro }

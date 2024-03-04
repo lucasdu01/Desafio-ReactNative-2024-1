@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, Modal, TextInput, Button, TouchableOpacity, ScrollView } from 'react-native';
 
-import { ModalView} from '../components/Modais/ModalView';
+import {ModalView} from '../components/Modais/ModalView';
 import {ModalEdit} from '../components/Modais/ModalEdit';
 import {ModalDelete} from '../components/Modais/ModalDelete';
 

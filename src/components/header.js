@@ -1,8 +1,5 @@
 import React from 'react';
-import { Pressable, View, Text, StyleSheet, Image, Button } from 'react-native';
-
-
-
+import { Pressable, View, StyleSheet, Image} from 'react-native';
 
 export default function Header({navigate, home}) {
 

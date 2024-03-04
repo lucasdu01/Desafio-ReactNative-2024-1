@@ -104,8 +104,4 @@ const styles = StyleSheet.create({
         margin: "2%",
         alignItems: "center"
     },
-
-    button: {
-        backgroundColor: "green",
-    }
 })

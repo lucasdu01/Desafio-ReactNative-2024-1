@@ -49,13 +49,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: 'black',        
     },
-    title:{
-        fontSize: 25,
-        fontWeight: 'bold',
-        color: 'black',
-        marginBottom: '5%',
-    },
-
+    
     card: {
         alignItems: 'center',
         padding:'5%',
@@ -63,6 +57,13 @@ const styles = StyleSheet.create({
         height: '95%',
         backgroundColor: '#d3d3d3',
         borderRadius:10,
+    },
+    
+    title:{
+        fontSize: 25,
+        fontWeight: 'bold',
+        color: 'black',
+        marginBottom: '5%',
     },
 
     content:{

@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, SafeAreaView, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import { TextInput } from 'react-native-paper';
 
 export function ModalView( { handleClose, nome, email, aniversario, cargo } ) {
     return (
@@ -9,11 +8,20 @@ export function ModalView( { handleClose, nome, email, aniversario, cargo } ) {
 
             <View style={styles.content}>
                 <Text style={styles.textTitle}>Visualizar Membro</Text>
-                <Text style={styles.campos}> {nome} </Text>
-                <Text style={styles.campos}>{ email }</Text>
-                <Text style={styles.campos}>{ aniversario }</Text>
-                <Text style={styles.campos}>{ cargo }</Text>
 
+                {/* Campo Nome */}
+                <Text style={styles.campos} placeholder="Nome:"> { nome } </Text> 
+
+                {/* Campo Email */}
+                <Text style={styles.campos} placeholder="Email:">{ email }</Text>
+
+                {/* Campo Aniversario */}
+                <Text style={styles.campos} placeholder="Aniversario:">{ aniversario }</Text>
+
+                {/* Campo Cargo */}
+                <Text style={styles.campos} placeholder="Cargo:">{ cargo }</Text>
+
+                {/* Botao Fechar */}
                 <TouchableOpacity 
                     style={styles.btnClose} 
                     onPress={ handleClose }
@@ -84,7 +92,4 @@ const styles = StyleSheet.create({
         padding: 4,
         color:'#00ced1'
     },
-
-    
-    
 })

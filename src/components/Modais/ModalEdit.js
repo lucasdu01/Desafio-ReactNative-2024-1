@@ -16,27 +16,61 @@ export function ModalEdit( { handleClose, handleEdit, nome, email, aniversario, 
           aniversario: novoAniversario, 
           cargo: novoCargo,
         };
-        
-        handleEdit(editMembro, id);
-      
-      };
+
+        handleEdit(editMembro, id);  //Chama a função de Editar Membro
+    };
+
     return (
        <SafeAreaView style={styles.container}>
             <TouchableOpacity style={{ flex: 1, zIndex:9, }} onPress={ handleClose }></TouchableOpacity>
 
             <View style={styles.content}>
                 <Text style={styles.textTitle}>Editar Membro</Text>
-                <TextInput style={styles.campos} placeholder = {nome} value={novoNome} onChangeText={(text) => setNovoNome(text)}></TextInput>
-                <TextInput style={styles.campos} placeholder = {email} value={novoEmail} onChangeText={(text) => setNovoEmail(text)}></TextInput>
-                <TextInput style={styles.campos} placeholder = {aniversario} value={novoAniversario} onChangeText={(text) => setNovoAniversario(text)}></TextInput>
-                <TextInput style={styles.campos} placeholder = {cargo} value={novoCargo} onChangeText={(text) => setNovoCargo(text)}></TextInput>
 
+                {/* Campo Nome */}
+                <TextInput 
+                    style={styles.campos} 
+                    placeholder={ nome }       
+                    value={ novoNome } 
+                    onChangeText={(text) => setNovoNome(text)}
+                    >
+                </TextInput>
+
+                {/* Campo Email */}
+                <TextInput 
+                    style={styles.campos} 
+                    placeholder={ email }      
+                    value={ novoEmail } 
+                    onChangeText={(text) => setNovoEmail(text)}
+                    >
+                </TextInput>
+
+                {/* Campo Aniversario */}
+                <TextInput 
+                    style={styles.campos} 
+                    placeholder={ aniversario } 
+                    value={ novoAniversario } 
+                    onChangeText={(text) => setNovoAniversario(text)}
+                    >
+                </TextInput>
+
+                {/* Campo Cargo */}
+                <TextInput 
+                    style={styles.campos} 
+                    placeholder={ cargo } 
+                    value={ novoCargo } 
+                    onChangeText={(text) => setNovoCargo(text)}
+                    >
+                </TextInput>
+
+                {/* Botão Editar */}
                 <TouchableOpacity 
                     style={styles.btnEdit} 
                     onPress={ () => editarMembro(id)}
-                >
+                    >
                     <Text style={styles.textEdit}>Salvar</Text>
                 </TouchableOpacity>
+
             </View>
         </SafeAreaView>
     )
